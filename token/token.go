@@ -42,3 +42,16 @@ const (
     INT = "INT"
     STRING = "STRING"
 )
+
+var keywords = map[string]TokenType {
+    "let": LET,
+    "fn": FUNCTION,
+}
+
+func LookUpIdentifer(ident string) TokenType {
+    if tok, ok := keywords[ident]; ok {
+        return tok
+    }
+    // Not found in keywords, so must be an identifier
+    return IDENT
+}
