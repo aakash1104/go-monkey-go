@@ -1,6 +1,6 @@
 <p align="center">
     <img src="resources/monkey-drawing.png" alt="Monkey Programming Language"
-    height="50%" width="50%">
+    height="25%" width="25%">
 </p>
 
 ## :monkey: MonkeyLang Interpreter :monkey: ##
