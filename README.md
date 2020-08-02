@@ -1,8 +1,9 @@
 <p align="center">
-    <img src="resources/monkey-drawing.jpg" akt="Monkey Programming Language">
+    <img src="resources/monkey-drawing.png" alt="Monkey Programming Language"
+    height="50%" width="50%">
 </p>
 
-## :monkey: MonkeyLang Interpreter :monkey:##
+## :monkey: MonkeyLang Interpreter :monkey: ##
 
 `Go-Monkey-Go` is an interpreter for [monkeylang](https://monkeylang.org/), a
 simple programming language created by 
