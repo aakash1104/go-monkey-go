@@ -27,6 +27,14 @@ const (
     DIVIDE = "/"
     MODULO = "%"
     ASSIGN = "="
+    NOT = "!"
+
+    LT = "<"
+    GT = ">"
+    LTE = "<="
+    GTE = ">="
+    EQUAL = "=="
+
 )
 
 const (

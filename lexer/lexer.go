@@ -68,6 +68,12 @@ func (l *Lexer) NextToken() token.Token {
         tok = NewToken(token.DIVIDE, l.ch)
     case '%':
         tok = NewToken(token.MODULO, l.ch)
+    case '<':
+        tok = NewToken(token.LT, l.ch)
+    case '>':
+        tok = NewToken(token.GT, l.ch)
+    case '!':
+        tok = NewToken(token.NOT, l.ch)
     case 0:
         tok.Literal = ""
         tok.Type = token.EOF
