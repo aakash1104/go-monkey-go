@@ -11,11 +11,15 @@ const (
     // Parser specific
     ILLEGAL = "ILLEGAL"
     EOF = "EOF"
+)
 
+const (
     // Keywords
     FUNCTION =  "FUNCTION"
     LET = "LET"
+)
 
+const (
     // Operators
     PLUS = "+"
     MINUS = "-"
@@ -23,7 +27,9 @@ const (
     DIVIDE = "/"
     MODULO = "%"
     ASSIGN = "="
+)
 
+const (
     // Delimiters
     COMMA = ","
     SEMICOLON = ";"
@@ -36,7 +42,9 @@ const (
 
     LSQUARE = "["
     RSQUARE = "]"
+)
 
+const (
     // Identifiers and literal values
     IDENT = "IDENT"
     INT = "INT"

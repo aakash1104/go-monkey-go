@@ -102,16 +102,29 @@ func (l *Lexer) ReadIdentifier() string {
 func IsLetter(ch byte) bool {
     return ('a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_')
 }
-func NewToken(token_type token.TokenType, ch byte) token.Token {
-    return token.Token{Type: token_type, Literal: string(ch)}
+
+func IsDigit (ch byte) bool {
+    return '0' <= ch && ch <= '9'
 }
 
+/**
+ * @func SkipWhitespace: Eat up whitespace.
+ **/
 func (l *Lexer) SkipWhitespace() {
     for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
         l.ReadChar()
     }
 }
 
+func NewToken(token_type token.TokenType, ch byte) token.Token {
+    return token.Token{Type: token_type, Literal: string(ch)}
+}
+
+/**
+ * @func: ReadNumber - read number till we encounter a non digit
+ * @receiver: l *Lexer
+ * @return string that contains the int
+ **/
 func (l *Lexer) ReadNumber() string {
     orig_pos := l.pos
     for IsDigit(l.ch) {
@@ -120,6 +133,3 @@ func (l *Lexer) ReadNumber() string {
     return l.input[orig_pos:l.pos]
 }
 
-func IsDigit (ch byte) bool {
-    return '0' <= ch && ch <= '9'
-}
