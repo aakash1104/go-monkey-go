@@ -5,6 +5,8 @@
 
 <h2 align="center">
     :monkey: MonkeyLang Interpreter :monkey:
+    <br>
+    <img src="https://img.shields.io/badge/status-under%20development-yellow">
 </h2>
 
 `Go-Monkey-Go` is an interpreter for [monkeylang](https://monkeylang.org/), a
