@@ -19,7 +19,7 @@ Ball's book [Writing an Interpreter in Go](https://interpreterbook.com).
 Monkey has a very simple syntax. Monkey supports primitive data types such as
 integers, strings, booleans. Variable declarations are done like this:
 
-```{js}
+```js
 let num = 10;
 let b = num + 50;
 let str = "Hello";
@@ -28,14 +28,14 @@ let flag = true;
 
 Monkey also supports user defined functions:
 
-```{js}
+```js
 let sum = fn(a, b) {
     x + y;
 };
 ```
 There's also support for conditional statements:
 
-```{js}
+```js
 if (a <= b) {
     return true;
 } else {
