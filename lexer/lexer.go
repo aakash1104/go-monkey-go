@@ -31,7 +31,8 @@ func (l *Lexer) ReadChar() {
 }
 
 /**
- * @func NextToken: Returns a token.Token struct
+ * @func NextToken: Returns the next token in the input 
+ * @return: token.Token struct
  * @receiver lexer
  */
 func (l *Lexer) NextToken() token.Token {
