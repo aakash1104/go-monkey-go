@@ -67,7 +67,12 @@ let add = fn(x, y) {
 let result = add(f, t);
 
 10 < 5 > 10!;
-`
+
+if (5 < 10) {
+    return true;
+} 
+else
+    return false;`
 
     tests := []struct {
         ExpectedType token.TokenType
@@ -115,6 +120,21 @@ let result = add(f, t);
         {token.GT, ">"},
         {token.INT, "10"},
         {token.NOT, "!"},
+        {token.SEMICOLON, ";"},
+        {token.IF, "if"},
+        {token.LPAREN, "("},
+        {token.INT, "5"},
+        {token.LT, "<"},
+        {token.INT, "10"},
+        {token.RPAREN, ")"},
+        {token.LBRACE, "{"},
+        {token.RETURN, "return"},
+        {token.TRUE, "true"},
+        {token.SEMICOLON, ";"},
+        {token.RBRACE, "}"},
+        {token.ELSE, "else"},
+        {token.RETURN, "return"},
+        {token.FALSE, "false"},
         {token.SEMICOLON, ";"},
         {token.EOF, ""},
     }

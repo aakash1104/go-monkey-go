@@ -84,6 +84,7 @@ func (l *Lexer) NextToken() token.Token {
             tok.Type = token.LookUpIdentifer(tok.Literal)
             return tok
         } else if (IsDigit(l.ch)) {
+            // Encountered a digit so read till we encounter a non-digit
             tok.Type = token.INT
             tok.Literal = l.ReadNumber()
             return tok
@@ -96,6 +97,12 @@ func (l *Lexer) NextToken() token.Token {
     l.ReadChar()
     return tok
 }
+
+/**
+ * @func ReadIdentifier: Scan input till a non-letter character is found
+ * @receiver: Lexer
+ * @return string corresponding to the identifier
+ **/
 
 func (l *Lexer) ReadIdentifier() string {
     orig_pos := l.pos
@@ -122,6 +129,11 @@ func (l *Lexer) SkipWhitespace() {
     }
 }
 
+/**
+ * @func NewToken: Function to return a new token struct with type @token_type
+ * and literal @ch
+ *
+ **/
 func NewToken(token_type token.TokenType, ch byte) token.Token {
     return token.Token{Type: token_type, Literal: string(ch)}
 }
@@ -138,4 +150,5 @@ func (l *Lexer) ReadNumber() string {
     }
     return l.input[orig_pos:l.pos]
 }
+
 
