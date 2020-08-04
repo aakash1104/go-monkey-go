@@ -17,10 +17,9 @@ Ball's book [Writing an Interpreter in Go](https://interpreterbook.com).
 ###  Understanding MonkeyLang Syntax ###
 
 Monkey has a very simple syntax. Monkey supports primitive data types such as
-integers, strings, booleans. Most of the syntax resembles C. 
-Variable declarations are done like this:
+integers, strings, booleans. Variable declarations are done like this:
 
-```
+```{js}
 let num = 10;
 let b = num + 50;
 let str = "Hello";
@@ -28,14 +27,15 @@ let flag = true;
 ```
 
 Monkey also supports user defined functions:
-```
+
+```{js}
 let sum = fn(a, b) {
     x + y;
 };
 ```
 There's also support for conditional statements:
 
-```
+```{js}
 if (a <= b) {
     return true;
 } else {
